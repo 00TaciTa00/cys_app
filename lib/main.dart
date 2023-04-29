@@ -14,21 +14,36 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'CSY Demo',
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.grey.shade100,
         body: Column(
           children: [
             // Status Bar
             SizedBox(
-              height: 44,
+              height: 52,
               child:Container(
-                color: Colors.black.withAlpha(50),
+                color: Colors.black,
               ),
             ),
             // Camera Area
             SizedBox(
               height: 160, 
               child: Container(
-                color: Colors.lightBlue.shade100,
+                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                child: Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  decoration: BoxDecoration(
+                    shape: BoxShape.rectangle,
+                    border: Border.all(
+                      color: Colors.deepOrange,
+                      width: 10,
+                    ),
+                    color: Colors.white,
+                  ),
+                  child: const Icon(
+                    Icons.camera,
+                    size: 24,
+                  )
+                ),
               ),
             ),
             // Body
@@ -59,6 +74,7 @@ class MyApp extends StatelessWidget {
                   border: Border(
                     top: BorderSide(width: 1.0, color: Colors.grey),
                   ),
+                  color: Colors.white,
                 ),
               ),
             ),
