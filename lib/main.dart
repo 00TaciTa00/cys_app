@@ -21,29 +21,17 @@ class MyApp extends StatelessWidget {
             SizedBox(
               height: 52,
               child:Container(
-                color: Colors.black,
+                color: Colors.black54,
               ),
             ),
             // Camera Area
             SizedBox(
               height: 160, 
+               // upper box with menu icon
               child: Container(
-                padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
-                child: Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.rectangle,
-                    border: Border.all(
-                      color: Colors.deepOrange,
-                      width: 10,
-                    ),
-                    color: Colors.white,
-                  ),
-                  child: const Icon(
-                    Icons.camera,
-                    size: 24,
-                  )
-                ),
+                height: 160,
+                color: Colors.grey,
+                // Camera Icon
               ),
             ),
             // Body
@@ -53,14 +41,170 @@ class MyApp extends StatelessWidget {
                 child: Column(
                   children: [
                     // Recent Meal
+                    const SizedBox(
+                      width: 120,
+                      child: Text(
+                        '최근 식단',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 24,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ),
                     Container(
-                      height: 256,
-                      color: Colors.amber.shade100,
+                      padding: const EdgeInsets.all(2.5),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            // meal 
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                     // Recommend Meal
+                    const SizedBox(
+                      width: 120,
+                      child: Text(
+                        '추천 식단',
+                        textAlign: TextAlign.start,
+                        style: TextStyle(
+                          fontSize: 24,
+                          overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ),
                     Container(
-                      height: 256,
-                      color: Colors.red.shade100,
+                      padding: const EdgeInsets.all(2.5),
+                      decoration: const BoxDecoration(
+                        color: Colors.white,
+                        shape: BoxShape.rectangle
+                      ),
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            // meal 
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                            Container(
+                              padding: const EdgeInsets.all(2.5),
+                              decoration: const BoxDecoration(
+                                color: Colors.white,
+                              ),
+                              child: Container(
+                                height: 128,
+                                width: 128,
+                                decoration: const BoxDecoration(
+                                  color: Colors.yellow,
+                                  shape: BoxShape.rectangle
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ),
                   ],
                 ),
@@ -72,7 +216,10 @@ class MyApp extends StatelessWidget {
               child: Container(
                 decoration: const BoxDecoration(
                   border: Border(
-                    top: BorderSide(width: 1.0, color: Colors.grey),
+                    top: BorderSide(
+                      width: 1.0, 
+                      color: Colors.grey
+                      ),
                   ),
                   color: Colors.white,
                 ),
