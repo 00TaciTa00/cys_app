@@ -1,16 +1,8 @@
 # cys_app
 
-A new Flutter project.
+Confess Your Sugar : 안드로이드 앱
+한식 이미지 촬영 -> YoloV5를 활용해 음식의 당 함유량 추정
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+미완입니다.
