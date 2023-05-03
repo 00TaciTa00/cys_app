@@ -1,63 +1,23 @@
-import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'camera_app.dart';
 
-late List<CameraDescription> _cameras;
-
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-
-  _cameras = await availableCameras();
-  runApp(const CameraApp());
+void main() {
+  runApp(const MyApp());
 }
 
-/// CameraApp is the Main Application.
-class CameraApp extends StatefulWidget {
-  /// Default Constructor
-  const CameraApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<CameraApp> createState() => _CameraAppState();
-}
-
-class _CameraAppState extends State<CameraApp> {
-  late CameraController controller;
-
-  @override
-  void initState() {
-    super.initState();
-    controller = CameraController(_cameras[0], ResolutionPreset.max);
-    controller.initialize().then((_) {
-      if (!mounted) {
-        return;
-      }
-      setState(() {});
-    }).catchError((Object e) {
-      if (e is CameraException) {
-        switch (e.code) {
-          case 'CameraAccessDenied':
-            // Handle access errors here.
-            break;
-          default:
-            // Handle other errors here.
-            break;
-        }
-      }
-    });
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    super.dispose();
-  }
-
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    if (!controller.value.isInitialized) {
-      return Container();
-    }
     return MaterialApp(
-      home: CameraPreview(controller),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+      
+        primarySwatch: Colors.green,
+      ),
+      home: CameraExample(),
     );
   }
 }
